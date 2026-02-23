@@ -13,8 +13,14 @@
     "windows": [
       {
         "title": "toy-box-salary-accumulation",
-        "width": 800,
-        "height": 600
+        "width": 250,
+        "height": 350,
+        "resizable": true,
+        "decorations": false,
+        "alwaysOnTop": true,
+        "transparent": true,
+        "fullscreen": false,
+        "skipTaskbar": true
       }
     ],
     "security": {

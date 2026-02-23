@@ -18,8 +18,15 @@ crate-type = ["staticlib", "cdylib", "rlib"]
 tauri-build = { version = "2", features = [] }
 
 [dependencies]
-tauri = { version = "2", features = [] }
+tauri = { version = "2", features = ["tray-icon"] }
 tauri-plugin-opener = "2"
 serde = { version = "1", features = ["derive"] }
 serde_json = "1"
+tauri-plugin-autostart = "2.5.1"
 
+[profile.release]
+panic = "abort" # 發生 panic 時直接終止，減少程式碼體積
+codegen-units = 1 # 增加編譯時間以換取更好的優化
+lto = true # 開啟連結時優化 (Link Time Optimization)
+opt-level = "z" # 優化目標：最小化檔案大小 (Binary size)
+strip = true # 自動移除符號表與除錯資訊
