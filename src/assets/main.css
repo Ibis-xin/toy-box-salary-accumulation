@@ -1,0 +1,121 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@700&family=Outfit:wght@700&display=swap");
+
+:root {
+  /* Colors */
+  --bg-app: rgba(15, 23, 42, 0.85);
+  --bg-glass: rgba(255, 255, 255, 0.1);
+  --bg-glass-hover: rgba(255, 255, 255, 0.2);
+  --bg-glass-light: rgba(255, 255, 255, 0.04);
+
+  --text-primary: #ffffff;
+  --text-secondary: #94a3b8;
+
+  --primary-gradient-start: #6366f1;
+  --primary-gradient-end: #a855f7;
+
+  --color-success: #22c55e;
+  --color-danger: #ef4444;
+  --color-danger-alt: #f43f5e;
+
+  --border-glass: rgba(255, 255, 255, 0.1);
+
+  /* Layout & Spacing */
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 12px;
+  --radius-full: 9999px;
+
+  --spacing-xs: 4px;
+  --spacing-sm: 8px;
+  --spacing-md: 12px;
+  --spacing-lg: 16px;
+  --spacing-xl: 20px;
+
+  /* Typography */
+  --font-family-primary: "Inter", system-ui, -apple-system, sans-serif;
+  --font-family-title: "Outfit", sans-serif;
+
+  --font-size-xs: 0.6rem;
+  --font-size-sm: 0.7rem;
+  --font-size-base: 0.75rem;
+  --font-size-md: 0.85rem;
+  --font-size-lg: 0.9rem;
+  --font-size-xl: 1.1rem;
+
+  --font-weight-normal: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+
+  /* Opacity */
+  --opacity-muted: 0.5;
+  --opacity-secondary: 0.6;
+  --opacity-glass: 0.7;
+  --opacity-active: 0.9;
+
+  /* Effects */
+  --shadow-card: 0 8px 32px rgba(0, 0, 0, 0.4);
+  --shadow-dot: 0 0 8px var(--color-success);
+
+  /* Transitions */
+  --transition-fast: 0.2s ease;
+  --transition-base: 0.3s ease;
+  --transition-slow: 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+:root {
+  color-scheme: dark;
+}
+
+body {
+  margin: 0;
+  overflow: hidden;
+  background: transparent !important;
+  font-family: var(--font-family-primary);
+  user-select: none;
+}
+
+/* Utilities */
+.glass-effect {
+  background: var(--bg-app);
+  backdrop-filter: blur(16px) saturate(180%);
+}
+
+.icon-btn-base {
+  background: var(--bg-glass);
+  border: none;
+  border-radius: var(--radius-sm);
+  color: var(--text-secondary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.icon-btn-base:hover {
+  background: var(--bg-glass-hover);
+  color: var(--text-primary);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--bg-glass-hover);
+  border-radius: var(--radius-full);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+::-webkit-scrollbar-button {
+  display: none;
+}
